@@ -162,6 +162,10 @@ print(df)
 db = pymysql.connect(host='localhost', port=3306, user='root', passwd='1234', db='AIR', charset='utf8')
 cursor = db.cursor()
 
+sql = "DROP TABLE IF EXISTS airline"
+
+cursor.execute(sql)
+
 sql = '''
 CREATE TABLE airline (
     airline VARCHAR(10) NOT NULL PRIMARY KEY,
