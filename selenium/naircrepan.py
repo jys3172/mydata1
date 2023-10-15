@@ -36,6 +36,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
+#브라우저 사람행동
+chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+
 #불필요한 에러 메세지 없애기
 chrome_options.add_experimental_option("excludeSwitches",["enable-logging"])
 
