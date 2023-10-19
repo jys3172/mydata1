@@ -1,0 +1,45 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>항공권</title>
+    <H1> 항공권</H1> 
+</head>
+<body>
+
+
+
+<br>
+<br>
+	<table class="table table-hover table-striped text-center" style=" width: 50%; border: 1px  solid #111114;">
+		<thead>
+			<tr>
+				<center>
+				<th>항공권</th>
+				<th>출발</th>
+				<th>귀국</th>
+				<th>가격</th>
+				</center>
+			</tr>
+		</thead>
+	    
+	    <tbody>
+			{% for i in data_list %}
+			<tr>
+				
+
+				<td><center>{{ i[0] }}</center></td>
+				<td><center>{{ i[1] }}</center></td>
+				<td><center>{{ i[2] }}</center></td>
+				<td><center>{{ i[3] }}</center></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		
+	</table>
+
+
+
+</body>
+</html>
